@@ -1,110 +1,126 @@
+body {
+  background-image: url("https://i.pinimg.com/originals/28/a2/88/28a288f5675e83c864503fb8c58a2d12.jpg");
+  height: 750px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
 
+.navbar {
+  max-height: 50px;
+}
+.navigation .navbar-brand {
+  color: rgb(52, 149, 165);
+  margin-left: 0px;
+  padding: inherit;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  font-family: cochin;
+}
+.navbar {
+  background-color: rgb(255, 255, 255);
+  font-size: 25px; 
+}
+.active, .dropdown-menu .dropdown-item:active a:hover {
+  background-color: rgb(255,255,255);
+}
+.dropdown-item {
+  color: rgba(52, 150, 165, 0.75);
+}
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(52, 150, 165, 0.75);
+}
 
-/* Summary Box */
-#description-image {
-    width: 250px;
-    height:200px;
-    float: left;
-    margin-right: 15px;
-  }
-  .description-content {
-    color: black;
-    font-size: 20px;
-    margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 10px 30px 40px;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.nav-link:hover {
+  background-color:rgba(52, 150, 165, 0.75);
+ }
+
+.navbar-brand:hover {
+color: rgb(45, 158, 175);
+}
+a {
+  color: rgb(231, 231, 231);
+  font-size: 15px;
+}
+
+img{
+  width:100%;
+  height:100%;
+}
+.active, .panel:hover {
+  border-color:rgb(52, 149, 165);
+  border-style: solid;
   
-  /* From id on comparison page - header*/
-  #description-header {
-      color:teal;
-      font-size: 35px;
-      font-weight: bold;
-      font-family: Georgia, Times, "Times New Roman", serif;
-      padding-top: 15px; 
-      padding-left: 4px;
-  }
-  
-  
-  /* Summary and Vizualization Headers*/
-  .description-header, .imageNav-header {
-      color:teal;
-      font-size: 35px;
-      font-weight: bold;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    padding-top: 15px; 
-      padding-left: 4px;
-  }
-  
-  h3 {
-    color:darkslategrey;
-    font-size: 18px;
-    text-align: center;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-weight: bold;
-  }
-  
-  /* Vizualization boxes*/
-  #imageNav-area {
-    margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 10px 30px 40px;
-    background-color: white;
-    display: inline-block;
-    object-fit: contain;
-  }
-  #images{
-    object-fit: contain;
-    display: inline-block;
-    flex-wrap: wrap
-  }
-  
-  .imageNav-photo {
-    width: 100%;
-    height: 100%;
-    object-fit:contain;
-     max-height: 100%;
-     max-width: 100%;    
-     display: inline-block;
-     margin: auto auto;
-  }
-  
-  
-  /* Navbar */
-  
-  #bs-example-navbar-collapse-1 {
-    max-height: 55px; 
-    background-color: white; 
-    font-size: 25px;
-  }
-  #logo {
-    color: white;
-    background-color: teal;
-    margin-left: 20px;
-  }
-  .dropdown {
-    font-size: 25px;
-    color: black;
+}
+.vizualization {
+  width:50%;
+  height:50%;
+}
+
+.title {
+  color: rgb(52, 149, 165);
+  font-family: cochin;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
+p {
+color: rgb(52, 149, 165);
+font-family: 'segoe ui';
+font-size: 16px;
+}
+
+.box {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding: 10px 30px 10px;
+  color: #ffffff;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.table {
+  font-size: 15px;
+  border-top-color: rgb(255, 255, 255);
+}
+
+footer {
+background-color: #000000;
+border-top-style: solid;
+border-top-width: 5px;
+border-top-color: rgb(37, 80, 87);
+color: rgb(171, 222, 226);
+min-height: 50px;
+font-family: Menlo, Helvetica, sans-serif;
+font-size: 10px;
+text-align: center;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+padding-top: 15px;
+}
+
+@media(max-width: 992px) {
+  .navbar-expand-lg {
+  background-color: #000000;
   }
   .navbar {
-    color: black;
+    max-height: none;
+    padding: inherit;
   }
-  
-  .navigation .navbar-brand{
-      color: white; 
-      margin-left: 50px; 
-      padding: inherit; 
-      font-weight: bold; 
-      background-color:teal;
-      font-family: Georgia, Times, "Times New Roman", serif;
+  .navbar div {
+    margin: inherit;
+    background-color: rgb(255,255,255);
   }
-  
-  
-  
-  /* Final Tweaks*/
-  body{
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/837/909/171/trees-landscape-mountains-nature-lake-hd-wallpaper-preview.jpg)
+  .navbar-brand {
+    padding: 10px;
   }
-  
+  button{
+    margin-right: 30px;
+  }
+  button:focus {
+    outline: 1px dotted;
+    outline: auto 5px;
+  }
+}

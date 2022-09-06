@@ -1,137 +1,106 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
+<!doctype html>
+<html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <title>Bootstrap Visualization Dashboard</title>
-
-  <!-- Boostrap Stylesheet -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
-
-  <!-- Our own CSS stylesheet -->
-  <link rel="stylesheet" href="assets/css/styles.css" media="screen">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Weather Dashboard</title>
 </head>
-
 <body>
-
-
-  <!-- Start of navbar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid navbar-custom">
-
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="row">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="col-xs-9 phone-nav">
-            <a class="navbar-brand" href="#" id="logo">Lattitude</a>
-          </div>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right navbar-right-custom">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">Plots <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="visualizations/temp.html">Max Temperature</a></li>
-                <li><a href="visualizations/humidity.html">Humidity</a></li>
-                <li><a href="visualizations/cloudiness.html">Cloudiness</a></li>
-                <li><a href="visualizations/wind.html">Wind Speed</a></li>
-              </ul>
-            </li>
-            <li><a href="comparison.html">Comparison</a></li>
-            <li><a href="data.html">Data</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div>
-    </div><!-- /.container-fluid -->
-  </nav>
-  <!-- End of navbar -->
-
-  <!-- Start of container -->
-  <div class="container">
-    <section class="row">
-      <div class="col-lg-8 col-md-8 col-sm-6 col-xm-12">
-        <article class="description-content">
-          <h1 class="description-header">Summary: Latitude vs. X</h1>
-          <hr class="description-hr" />
-          <img src="assets/images/Fig1.png" alt="danielle's html pic" id="description-image" />
-          <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To
-            accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500
-            cities.</p>
-          <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
-            Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the
-            source data and visualizations created as part of the analysis, as well as explanations and descriptions of
-            any trends and correlations witnessed.</p>
-        </article>
-      </div>
-      <!-- Start of Visualizations Right sidebar -->
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xm-12">
-        <section id="imageNav-area">
-          <div class="imageNav-content">
-            <h2 class="imageNav-header">Visualizations</h2>
-            <hr />
-            <div id="images">
-              <div class="row" id="outer">
-                <div>
-                  <h3>Latitude vs. Max Temperature</h3>
-                  <a href="visualizations/temp.html"><img src="assets/images/Fig1.png"
-                      alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
-                </div>
-                <div>
-                    <h3>Latitude vs. Humidity</h3>
-                  <a href="visualizations/humidity.html"><img src="assets/images/Fig2.png" 
-                    alt="Latitude vs. Humidity" class="imageNav-photo"></a>
-                </div>
-
-                <div>
-                    <h3>Latitude vs. Cloudiness</h3>
-                  <a href="visualizations/cloudiness.html"><img src="assets/images/Fig3.png"
-                      alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
-                </div>
-                <div>
-                    <h3>Latitude vs. Wind Temperature</h3>
-                  <a href="visualizations/wind.html"><img src="assets/images/Fig4.png" 
-                    alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
-                </div>
-              </div>
-
+    <div class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" style="background-color: rgb(255,255,255);" href="index.html">LATITUDE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PLOTS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="WebVisualizations/temperature.html">Max Temperature</a>
+                            <a class="dropdown-item" href="WebVisualizations/humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="WebVisualizations/cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="WebVisualizations/wind.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="WebVisualizations/comparison.html">COMPARISON</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="WebVisualizations/data.html">DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/amagsino/Web-Design-Challenge">REPO</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-        </section>
-      </div>
-      <!-- End of the Visualizations sidebar -->
-    </section>
-  </div>
-  <!-- End of container -->
-
-  <!-- Start of footer -->
-  <footer class="footer navbar-fixed-bottom">
-    <div class="two-toned-footer-color"></div>
-    <p class="text-muted text-muted-footer text-center">
-      &copy; Copyright Coding Bootcamp 2017
-    </p>
-  </footer>
-  <!-- End of footer -->
-
-  <!-- jQuery CDN -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-  <!-- Bootstrap CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="box" style="padding-bottom: 20px;">
+                    <h3 class="title">SUMMARY: WEATHER PLOTS <br> (LATITUDE VS. X)</h3>
+                    <hr>
+                    <img src="Resources/assets/images/Fig1.png" class="vizualization rounded float-left" alt="Max Temperature Graph">
+                    <p> The purpose of this project was to analyze how weather across 500+ cities across the world
+                      changes as you get closer to the equator. To accomplish this analysis, OpenWeatherMap API was
+                      utilized to assemble the dataset to create a representative model of weather across world cities.</p>
+                      <br>
+                    <p> Matplotlib was used to build a series of plots to showcase the relationships regarding several variables
+                      of weather vs. latitude. Relationships analyzed included: Temperature (F) vs. Latitude, Humidity (%) vs. Latitude,
+                      Cloudiness (%) vs. Latitude, and Wind Speed (mph) vs. Latitude.</p>
+                      <br>
+                    <p> Data and visualizations are are provided as part of the analysis, including explanations and descriptions
+                      of trends and correlations.</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="box">
+                    <h3 class="title">VISUALIZATIONS</h3>
+                    <hr>
+                    <div class="container">
+                        <div class="row" style="padding-bottom: 70px;">
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Max Temperature</div>
+                                <a href="WebVisualizations/temperature.html">
+                                <img class="panel" src="Resources/assets/images/Fig1.png" alt="Max Temperature Graph">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Humidity</div>
+                                <a href="WebVisualizations/humidity.html">
+                                <img class="panel" src="Resources/assets/images/Fig2.png" alt="Humidity Graph">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-bottom: 70px;">
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Cloudiness</div>
+                                <a href="WebVisualizations/cloudiness.html">
+                                <img class="panel" src="Resources/assets/images/Fig3.png" alt="Cloudiness Graph">
+                                </a>
+                                <!-- <div class="title">vs. Cloudiness</div> -->
+                            </div>
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Wind Speed</div>
+                                <a href="WebVisualizations/wind.html">
+                                    <img class="panel" src="Resources/assets/images/Fig4.png" alt="Wind Speed Graph">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer> Web Design Challenge - Aizelmarie Magsino </footer>
 </body>
-
 </html>
