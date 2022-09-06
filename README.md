@@ -1,4 +1,5 @@
 # Web-Design-Challenge
+<img width="1949" alt="Landing Page" src="https://user-images.githubusercontent.com/67832009/188742519-45f2d853-63ef-467d-aeb7-e4b688e63109.png">
 
 ## The objective of this challenge is to create our own webpage utilizing the work done on a previous assignment.
 
